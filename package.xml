@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>cloudgento-extension</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>CloudGento Magento Extension</summary>
+    <description>CloudGento Magento Extension</description>
+    <notes>CloudGento Magento Extension</notes>
+    <authors><author><name>CloudConversion</name><user>cloudconversion</user><email>peter@cloudconversion.com</email></author></authors>
+    <date>2013-01-29</date>
+    <time>23:13:51</time>
+    <contents><target name="magelocal"><dir name="CloudConversion"><dir name="CloudGento"><dir name="Helper"><file name="Data.php" hash="c643c6607d339118fe4acce37aa21e3b"/></dir><dir name="Model"><dir name="Catalog"><dir name="Product"><dir name="Api"><file name="V2.php" hash="c2533fa3fc1b61c616ee364ede6d4563"/></dir><file name="Api.php" hash="acd15e01ad9a250c1fdbc016389b649d"/></dir></dir><dir name="Order"><dir name="Api"><file name="V2.php" hash="e17dc8ac54508499565f6f9732bcbc03"/></dir><file name="Api.php" hash="c2767e75f9c004b49d4a41b54e0e643e"/><dir name="Shipment"><dir name="Api"><file name="V2.php" hash="6cfd0d0e1a9290ffb1a25db8aa2771e1"/></dir><file name="Api.php" hash="bc12ae1e8185253ecc8fe6111e258b5f"/></dir></dir><dir name="Resource"><file name="Message.php" hash="4b75b1086988077e86c219a3f39ef935"/><dir name="Order"><file name="Address.php" hash="738ffc04f63d9bd6f0a51b7c706075df"/><file name="Item.php" hash="5fcdfcc5737ffe2c2cc3d936c250da7f"/><file name="Payment.php" hash="4ed8fc8c74ae928852a584b4b6546b48"/><dir name="Status"><file name="History.php" hash="16d3aacea35cfcc98cbd76bb2194003f"/></dir></dir><file name="Order.php" hash="09b1a92158c2f835b7a743d5f5dc74dd"/></dir></dir><dir name="etc"><file name="api.xml" hash="016a4ceb67f92d1a64afbf9966b43578"/><file name="config.xml" hash="0e8a031b2ab7fadf778d1d218da6e7d1"/><file name="wsdl.xml" hash="54e13bfb57565dc27c94767d8578b0d1"/><file name="wsi.xml" hash="4a689a1a219c320d097ad2de61f9f275"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="CloudConversion_CloudGento.xml" hash="f63a0ccc652bd82328965940ea315fbd"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

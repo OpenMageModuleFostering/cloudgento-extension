@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/cloudgento-extension",
+    "type": "magento-module",
+    "license": "Open-Software-License-(OSL)",
+    "homepage": "",
+    "description": "CloudGento Magento Extension",
+    "authors": [
+    {
+        "name": "CloudConversion",
+        "email": "peter@cloudconversion.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:typens="urn:{{var wsdl.name}}"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  name="{{var wsdl.name}}"
+                  targetNamespace="urn:{{var wsdl.name}}">
+    <wsdl:types>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:{{var wsdl.name}}">
+            <xsd:complexType name="complexMultiFilter">
+                <xsd:sequence>
+                    <xsd:element name="key" type="xsd:string" />
+                    <xsd:element name="value" type="typens:associativeArray" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="complexMultiArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:complexMultiFilter" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductCreateEntity">
+                <xsd:sequence>
+                    <xsd:element name="associated_skus" type="typens:ArrayOfString" minOccurs="0" />
+                    <xsd:element name="price_changes" type="typens:complexMultiArray" minOccurs="0" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductReturnEntity">
+                <xsd:sequence>
+                    <xsd:element name="parent_sku" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="configurable_products_data" type="typens:childrenEntityArray" minOccurs="0" />
+                    <xsd:element name="configurable_attributes_data" type="typens:configurableOptionsEntityArray" minOccurs="0" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="childrenEntityArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:childrenEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="childrenEntity">
+                <xsd:sequence>
+                    <xsd:element name="sku" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="options" type="typens:optionsEntityArray" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="configurableOptionsEntityArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:configurableOptionsEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="configurableOptionsEntity">
+                <xsd:sequence>
+                    <xsd:element name="code" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="options" type="typens:optionsEntityArray" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="optionsEntityArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:optionsEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="optionsEntity">
+                <xsd:sequence>
+                    <xsd:element name="name" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="code" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="price" type="xsd:double" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:schema>
+    </wsdl:types>
+</wsdl:definitions>

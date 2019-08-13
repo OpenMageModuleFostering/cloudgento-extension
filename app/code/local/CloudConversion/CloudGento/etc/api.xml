@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <api>
+        <resources>
+            <sales_order translate="title" module="sales">
+                <methods>
+                    <import translate="title" module="sales">
+                        <title>Import orders</title>
+                        <acl>sales/order/import</acl>
+                    </import>	
+                </methods>
+                <faults module="sales">
+                    <import_failed>
+                        <code>105</code>
+                        <message>Import failed.</message>
+                    </import_failed>
+                    <invalid_protocol>
+                        <code>106</code>
+                        <message>This operation available through SOAP v2 only.</message>
+                    </invalid_protocol>	
+                    <unexisting_sku>
+                        <code>107</code>
+                        <message>Unexisting sku</message>
+                    </unexisting_sku>	
+                </faults>
+            </sales_order>
+        </resources>
+        <acl>
+            <resources>
+                <sales translate="title" module="sales">
+                    <order translate="title" module="sales">
+                        <import translate="title" module="sales">
+                            <title>Import orders</title>                   
+                        </import>
+                    </order>
+                </sales>
+            </resources>
+        </acl>
+    </api>
+</config>
+                
