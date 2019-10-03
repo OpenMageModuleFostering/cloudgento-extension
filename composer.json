@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/cloudgento-extension",
+    "name": "openmage-module-fostering\/cloudgento-extension",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "CloudGento Magento Extension",
     "authors": [
